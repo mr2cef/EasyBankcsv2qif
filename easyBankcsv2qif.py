@@ -108,7 +108,6 @@ class Transaction(object):
                    and len(self.desc2) > 0 and len(self.desc1) > 0:
                     self.htype = "transfer"
                     self.desc2 = self.desc2.split("|")[:-1]
-                    print(self.desc2)
                     self.desc2 = "|".join(self.desc2)
                     m = re.match(r"^(([A-Z0-9]+\W)?[A-Z]*[0-9]+)\W(\w+\W+\w+)\W*(.*)$", self.desc2)
                     if m is not None:
